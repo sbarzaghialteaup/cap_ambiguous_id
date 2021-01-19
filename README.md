@@ -4,6 +4,10 @@ Two entities: `Authors` and `Books`
 __Both the entities with `odata.draft.enabled`__
 
 # How to reproduce error
+Screenrecording:
+[recording](https://github.com/sbarzaghialteaup/cap_ambiguous_id/blob/master/explain_problem.gif)
+
+Steps:
 - clone
 - cds watch
 - open fiori preview for Books entity
