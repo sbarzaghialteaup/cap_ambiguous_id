@@ -15,6 +15,7 @@ entity Books : cuid {
 
 @cds.odata.valuelist
 entity Authors : cuid {
+    @title  : 'Author'
     name : String;
 }
 
@@ -23,5 +24,12 @@ annotate Books with {
 }
 
 annotate Authors with {
-    ID @UI.Hidden;
-};
+    ID @(
+        UI.Hidden,
+        Core.Computed,
+        Common.Text : {
+            $value                 : name,
+            ![@UI.TextArrangement] : #TextOnly
+        }
+    );
+}
