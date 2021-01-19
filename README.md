@@ -1,7 +1,7 @@
 # Schema
-Two entities: Authors and Books  
-Books has association to one Author  
-Both the entities with odata.draft.enabled
+Two entities: `Authors` and `Books`  
+`Books` has association to one `Author`  
+__Both the entities with `odata.draft.enabled`__
 
 # How to reproduce error
 - clone
@@ -9,7 +9,7 @@ Both the entities with odata.draft.enabled
 - open fiori preview for Books entity
 - edit one book
 - in the field "Author" write "allen"
-- you get popup with error "SQLITE_ERROR: ambiguous column name: ID"
+- you get popup with error `SQLITE_ERROR: ambiguous column name: ID`
 
 # Light analysis
 This odata request:
@@ -45,3 +45,5 @@ Error:
 ```
 Error: SQLITE_ERROR: ambiguous column name: ID
 ```
+
+No problems when no `odata.draft.enable` on the `Authors` entity
